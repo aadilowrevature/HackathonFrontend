@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-view-character',
@@ -7,34 +9,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewCharacterComponent implements OnInit {
 
-  constructor() { }
+  public characterName?: string;
 
-  gender:string='';
-  female:string="Female";
-  male:string="Male";
-  other:string="Other"
+  public gender?: string;
+  public hairColor?: string;
+  public strength?: string;
+  public intelligence?: string;
+  public wisdom?: string;
+  public dexterity?: string;
+  public numToes?: string;
+  public eyeColor?: string;
+  public race?: string;
+  public luck?: string;
 
-  hairColor:string='';
-  blonde:string="Blonde";
-  brunette:string="Brunette";
-  redHair:string="Red";
-  brownHair:string="Brown"
+  public description?: string;
 
-  eyeColor:string='';
-  blueEyes: string="Blue";
-  brownEyes: string="Brown";
-  greenEyes: string="Green";
-  redEyes: string="Red";
+  constructor(private location: Location, private router: ActivatedRoute) { }
 
-  race:string='';
-  human:string="Human";
-  dwarf:string="Dwarf";
-  elf:string="Elf";
-  unicorn:string="Unicorn"
-  
+
   ngOnInit(): void {
+
+    //Get the id of the character from the url so that we can fetch data
+    let characterIdString = this.router.snapshot.paramMap.get('id');
+    let characterId: number = 0;
+    if (characterIdString != null) {
+      characterId = parseInt(characterIdString);
+    }
   }
-
+  
+  goBack(): void {
+    this.location.back();
+  }
 }
-
-
