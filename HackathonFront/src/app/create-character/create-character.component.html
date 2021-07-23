@@ -1,6 +1,10 @@
+<div class="input-name">
+  Name
+  <input type="text" name="name" id="name">
+</div>
 <div class="input-gender">
   Gender
-  <select name="gender">
+  <select name="gender" id="gender">
     <option [value]="'female'">Female</option>
     <option [value]="'male'">Male</option>
     <option [value]="'other'">Other</option>
@@ -9,7 +13,7 @@
 
 <div class="input-hairColor">
   Hair Color
-  <select name="hairColor">
+  <select name="hairColor" id="hairColor">
     <option [value]="'blonde'">Blonde</option>
     <option [value]="'brunette'">Brunette</option>
     <option [value]="'redHair'">Red</option>
@@ -19,7 +23,7 @@
 
 <div class="input-eyes">
   Eye Color
-  <select name="eyes">
+  <select name="eyes" id="eyes">
     <option [value]="'blue'">Blue</option>
     <option [value]="'brown'">Brown</option>
     <option [value]="'green'">Green</option>
@@ -29,7 +33,7 @@
 
 <div class="input-race">
   Race
-  <select name="race">
+  <select name="race" id="race">
     <option [value]="'human'">Human</option>
     <option [value]="'dwarf'">Dwarf</option>
     <option [value]="'elf'">Elf</option>
@@ -39,25 +43,25 @@
 
 <div class="input-strength">
   Strength
-  <input type="number" id="Strength" name="Strength" min="1" max="10" />
+  <input type="number" id="strength" name="strength" min="1" max="10"/>
 </div>
 
 <div class="input-intelligent">
-  Intelligent
-  <input type="number" id="Intelligent" name="Intelligent" min="1" max="10" />
+  intelligence
+  <input type="number" id="intelligence" name="intelligence" min="1" max="10" />
 </div>
 
 <div class="input-wisdom">
-  Wisdom <input type="number" id="Wisdom" name="Wisdom" min="1" max="10" />
+  Wisdom <input type="number" id="wisdom" name="wisdom" min="1" max="10" />
 </div>
 
 <div class="input-dexterity">
   Dexterity
-  <input type="number" id="Dexterity" name="Dexterity" min="1" max="10" />
+  <input type="number" id="dexterity" name="dexterity" min="1" max="10" />
 </div>
 
 <div class="input-luck">
-  Luck <input type="number" id="Luck" name="Luck" min="1" max="10" />
+  Luck <input type="number" id="luck" name="luck" min="1" max="10" />
 </div>
 
 <div class="input-toeNum">
@@ -65,4 +69,4 @@
   <input type="number" id="toeNum" name="toeNum" min="0" max="30" />
 </div>
 <button type="button" (click)="onSubmit()">Save</button>
-<button type="button" >Cancel</button>
+<button type="button">Cancel</button>
